@@ -7,6 +7,8 @@ import { Plane, Map, Phone, User } from "lucide-react";
 import Link from "next/link";
 
 export default function Header() {
+  let isAuthorized = false;
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex justify-evenly items-center gap-80 h-24  ">
@@ -15,7 +17,8 @@ export default function Header() {
           <span className="text-xl font-bold">Travelia</span>
         </Link>
 
-        <NavigationMenu>
+        {isAuthorized === true ?
+          <NavigationMenu>
           <NavigationMenuList className="flex gap-10">
             <NavigationMenuItem className="hover:underline-offset-2">
               <Link href = "./" target="_self">
@@ -35,8 +38,11 @@ export default function Header() {
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
-        </NavigationMenu>
-
+        </NavigationMenu> 
+        : <>
+        <div className="w-44" />
+        </>
+        }
 
         <div className="flex items-center gap-4">
           <ModeToggle />
