@@ -14,13 +14,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
+
 export default function Explorebutton() {
   return (
     <>
       <Dialog>
         <DialogTrigger asChild>
-          <Button className="bg-sky-100 text-black hover:bg-sky-400 text-lg font-bold">
-            Explore
+          <Button className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 text-2xl font-semibold px-8">
+            Explore 
           </Button>
         </DialogTrigger>
         <DialogContent>
