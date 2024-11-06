@@ -7,6 +7,7 @@ import TestimonialCard from "@/components/testimonial-card";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { FocusCards } from "@/components/ui/focus-card";
+import Explorebutton from "@/components/explorebutton";
 
 
 const people = [
@@ -186,7 +187,7 @@ const Home = () => {
                 as="button"
                 className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 text-2xl font-semibold px-8"
               >
-                <span>Explore Packages</span>
+                <span><Explorebutton /></span>
               </HoverBorderGradient>
             </Link>
             <Link href="">
