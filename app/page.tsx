@@ -1,5 +1,6 @@
 import TourPackages from "@/components/tour-packages";
 import AboutUs from "@/components/about-us"
+import Explorebutton from "@/components/explorebutton"
 export default function Home() {
   return (
     <main>
@@ -12,6 +13,7 @@ export default function Home() {
             Explore curated travel packages for unforgettable experiences
           </p>
         </div>
+        <div className="flex justify-center"><Explorebutton/></div>
       </section>
       <section>
         <AboutUs/>
