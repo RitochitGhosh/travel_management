@@ -39,7 +39,7 @@ export default function Header() {
         <div className="flex items-center space-x-4">
           <ModeToggle />
           <Button variant="outline" size="icon">
-            <User className="h-4 w-4" />
+            <Link href={"/auth"}><User className="h-4 w-4" /></Link>
           </Button>
         </div>
       </div>

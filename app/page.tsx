@@ -1,5 +1,5 @@
 import TourPackages from "@/components/tour-packages";
-
+import AboutUs from "@/components/about-us"
 export default function Home() {
   return (
     <main>
@@ -12,6 +12,9 @@ export default function Home() {
             Explore curated travel packages for unforgettable experiences
           </p>
         </div>
+      </section>
+      <section>
+        <AboutUs/>
       </section>
       <TourPackages />
     </main>
