@@ -9,26 +9,27 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container mx-auto flex justify-evenly items-center gap-80 h-24  ">
         <Link href="/" className="flex items-center space-x-2">
           <Plane className="h-6 w-6" />
-          <span className="text-xl font-bold">Wanderlust</span>
+          <span className="text-xl font-bold">Travelia</span>
         </Link>
-        
+
         <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <Link href="/destinations" legacyBehavior passHref>
-                <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                  <Map className="mr-2 h-4 w-4" />
+          <NavigationMenuList className="flex gap-10">
+            <NavigationMenuItem className="hover:underline-offset-2">
+              <Link href = "./" target="_self">
+                <NavigationMenuLink className="group flex items-center gap-2 font-medium hover:underline ease-in-out">
+                  <Map className="h-6 w-6" />
                   Destinations
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
-              <Link href="/support" legacyBehavior passHref>
-                <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                  <Phone className="mr-2 h-4 w-4" />
+              <Link href = "" >
+                <NavigationMenuLink className="group flex items-center gap-2 font-medium hover:underline ease-in-out" >
+                  <Phone className="h-6 w-6" />
                   Support
                 </NavigationMenuLink>
               </Link>
@@ -36,10 +37,12 @@ export default function Header() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="flex items-center space-x-4">
+
+        <div className="flex items-center gap-4">
           <ModeToggle />
           <Button variant="outline" size="icon">
             <Link href={"/auth"}><User className="h-4 w-4" /></Link>
+            <User className="h-6 w-6" />
           </Button>
         </div>
       </div>
