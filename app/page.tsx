@@ -168,9 +168,7 @@ const Background = () => {
 }
 
 const Home = () => {
-  const isAuthorized = false;
-
-  
+  const isAuthorized = false;  
 
   return (
     <main>
@@ -190,13 +188,15 @@ const Home = () => {
                 <span><Explorebutton /></span>
               </HoverBorderGradient>
             </Link>
-            <Link href="">
+            <Link href="/start-journey">
               <HoverBorderGradient
                   containerClassName="rounded-full"
                   as="button"
                   className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 text-2xl font-semibold px-8"
                 >
-                <span>Start Journey</span>
+                  
+                    <span>Start Journey</span>
+                
               </HoverBorderGradient>
             </Link>
             <Link href="/info">
@@ -205,6 +205,7 @@ const Home = () => {
                 as="button"
                 className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 text-2xl font-semibold px-8"
               >
+                
                 <span>About Us</span>
               </HoverBorderGradient>
             </Link>
