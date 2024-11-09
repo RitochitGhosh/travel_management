@@ -6,6 +6,7 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuL
 import { Plane, Map, Phone, User } from "lucide-react";
 import Link from "next/link";
 
+
 export default function Header() {
   let isAuthorized = false;
 
@@ -17,13 +18,15 @@ export default function Header() {
           <span className="text-xl font-bold">Travelia</span>
         </Link>
 
-        {isAuthorized === true ?
+        {
+          isAuthorized === true ?
+
           <NavigationMenu>
           <NavigationMenuList className="flex gap-10">
             <NavigationMenuItem className="hover:underline-offset-2">
               <Link href = "./" target="_self">
                 <NavigationMenuLink className="group flex items-center gap-2 font-medium hover:underline ease-in-out">
-                  <Map className="h-6 w-6" />
+                  <Map className="h-8 w-8" />
                   Destinations
                 </NavigationMenuLink>
               </Link>
@@ -32,7 +35,7 @@ export default function Header() {
             <NavigationMenuItem>
               <Link href = "" >
                 <NavigationMenuLink className="group flex items-center gap-2 font-medium hover:underline ease-in-out" >
-                  <Phone className="h-6 w-6" />
+                  <Phone className="h-8 w-8" />
                   Support
                 </NavigationMenuLink>
               </Link>
@@ -48,7 +51,9 @@ export default function Header() {
           <ModeToggle />
           <Button variant="outline" size="icon">
 
-            <Link href={"/auth"}><User className="h-4 w-4" /></Link>
+            <Link href={"/auth"}> <User className="h-8 w-8" /></Link>
+
+            
 
           </Button>
         </div>
