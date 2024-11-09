@@ -1,10 +1,12 @@
 "use client";
 
+import * as z from "zod";
 import { RegisterSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useState, useTransition } from "react";
 import { register } from "@/actions/register";
+
 
 import { CardWrapper } from "@/components/auth/card-wrapper";
 import { Button } from "@/components/ui/button";
@@ -36,6 +38,7 @@ export const RegisterForm = () => {
             email: "",
             password: "",
             role: "customer", // Default role is customer
+            company: ""
         },
     });
 
@@ -44,10 +47,16 @@ export const RegisterForm = () => {
         setSuccess("");
         startTransition(() => {
             register(values).then((data) => {
-                setError(data.error);
-                setSuccess(data.success);
+                if (data.error) {
+                    setError(data.error);
+                    setSuccess(undefined); // Clear success if there’s an error
+                } else if (data.success) {
+                    setSuccess(data.success);
+                    setError(undefined); // Clear error if successful
+                }
             });
         });
+        
     };
 
     return (
