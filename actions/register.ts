@@ -10,6 +10,8 @@ Steps for server actions:
 */
 
 export const register = async (values : z.infer<typeof RegisterSchema> ) => {
+    console.log("Working..");
+    
 
     const validatedFields = RegisterSchema.safeParse(values);
 
