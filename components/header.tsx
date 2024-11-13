@@ -19,7 +19,7 @@ export default function Header() {
         </Link>
 
         {
-          isAuthorized === true ?
+          isAuthorized ?
 
           <NavigationMenu>
           <NavigationMenuList className="flex gap-10">
