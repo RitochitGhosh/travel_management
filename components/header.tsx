@@ -51,7 +51,7 @@ export default function Header() {
           <ModeToggle />
           <Button variant="outline" size="icon">
 
-            <Link href={"/auth"}> <User className="h-8 w-8" /></Link>
+            <Link href={"/auth/sign-up"}> <User className="h-8 w-8" /></Link>
 
             
 
