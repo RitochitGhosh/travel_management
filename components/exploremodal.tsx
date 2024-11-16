@@ -20,7 +20,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { log } from "node:console";
 
-export default function Explorebutton() {
+export default function ExploreModal() {
   const router = useRouter();
   const [destination, setDestination] = useState("");
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 50000]);

@@ -3,8 +3,10 @@
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
-import { Plane, Map, Phone, User } from "lucide-react";
+import { Plane, Map, Phone, User, Divide } from "lucide-react";
 import Link from "next/link";
+import ExploreModal from "./exploremodal";
+import { divMode } from "@tsparticles/engine";
 
 
 export default function Header() {
@@ -17,23 +19,19 @@ export default function Header() {
           <Plane className="h-6 w-6" />
           <span className="text-xl font-bold">Travelia</span>
         </Link>
-
-        {
-          isAuthorized ?
-
           <NavigationMenu>
           <NavigationMenuList className="flex gap-10">
             <NavigationMenuItem className="hover:underline-offset-2">
-              <Link href = "./" target="_self">
+              <Link href = "#Explore" target="_self">
                 <NavigationMenuLink className="group flex items-center gap-2 font-medium hover:underline ease-in-out">
                   <Map className="h-8 w-8" />
-                  Destinations
+                  <div>Explore</div>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href = "" >
+              <Link href = "#Contact-us" >
                 <NavigationMenuLink className="group flex items-center gap-2 font-medium hover:underline ease-in-out" >
                   <Phone className="h-8 w-8" />
                   Support
@@ -42,16 +40,12 @@ export default function Header() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu> 
-        : <>
-        <div className="w-44" />
-        </>
-        }
 
         <div className="flex items-center gap-4">
           <ModeToggle />
-          <Button variant="outline" size="icon">
+          <Button variant={isAuthorized?"outline":null} size={isAuthorized?"icon":null}>
 
-            <Link href={"/auth"}> <User className="h-8 w-8" /></Link>
+            <Link href={"/auth"}> {isAuthorized?<User className="h-8 w-8" />: <div className="bg-blue-600 text-white text-md font-bold p-3 rounded-xl">SignUp</div>}</Link>
 
             
 
