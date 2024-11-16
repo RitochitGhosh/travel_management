@@ -3,7 +3,7 @@ export default function FAQ() {
     <>
       <div>
         <div className=" min-h-[400px] p-6  rounded-lg">
-          <h1 className="font-title mb-16 mt-20 xl:mt-3 text-4xl font-bold flex justify-center">
+          <h1 className="font-title mb-6 xl:mb-16 mt-20 xl:mt-3 text-4xl font-bold flex justify-center">
             Frequently Asked Questions
           </h1>
           <div className="space-y-4">

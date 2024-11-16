@@ -99,7 +99,7 @@ const Home = () => {
         <TourPackages />
       ) : (
         <>
-          <div className="flex gap-44 justify-center items-center mt-[-90px]">
+          <div className="flex gap-32 xl:gap-44 justify-center items-center mt-[-90px]">
             <Link href="">
               <HoverBorderGradient
                 containerClassName="rounded-3xl"
@@ -131,9 +131,9 @@ const Home = () => {
             </Link>
           </div>
           <div className="mx-10 flex mt-16 ">
-            <div className="basis-1/3 flex flex-col gap-12 mt-2">
+            <div className="basis-1/3 flex flex-col gap-12 max-xl:gap-9 xl:mt-2">
               <div className="w-[0px] hover:-translate-y-[0px]"></div>
-              <div className=" w-[65%] transition-all duration-200 -translate-y-[-2px] hover:translate-y-0 hover:shadow-lg cursor-pointer ">
+              <div className="w-[85%] xl:w-[65%] transition-all duration-200 -translate-y-[-2px] hover:translate-y-0 hover:shadow-lg cursor-pointer ">
                 <BackgroundGradient>
                   <div className="bg-white p-4 rounded-md">
                     <h2 className="font-bold mb-1">Package Comparison</h2>
@@ -146,7 +146,7 @@ const Home = () => {
                 </BackgroundGradient>
               </div>
 
-              <div className="ml-24 xl:ml-32 2xl:ml-40 w-[65%] transition-all duration-200 -translate-y-[-2px] hover:translate-y-0 hover:shadow-lg cursor-pointer ">
+              <div className="ml-12 xl:ml-32 2xl:ml-40 w-[85%] xl:w-[65%] transition-all duration-200 -translate-y-[-2px] hover:translate-y-0 hover:shadow-lg cursor-pointer ">
                 <BackgroundGradient>
                   <div className="bg-white p-4 rounded-md">
                     <h2 className="font-bold mb-1">Real-time Availability</h2>
@@ -159,7 +159,7 @@ const Home = () => {
                 </BackgroundGradient>
               </div>
 
-              <div className=" w-[65%] transition-all duration-200 -translate-y-[-2px] hover:translate-y-0 hover:shadow-lg cursor-pointer ">
+              <div className="w-[85%] xl:w-[65%] transition-all duration-200 -translate-y-[-2px] hover:translate-y-0 hover:shadow-lg cursor-pointer ">
                 <BackgroundGradient>
                   <div className="bg-white p-4 rounded-md">
                     <h2 className="font-bold mb-1">
@@ -191,15 +191,15 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="mx-10 mt-10 flex gap-x-8">
-            <div className="w-1/3">
+          <div className="mx-10 mt-10 flex justify-center  items-center gap-x-8">
+            <div className="w-2/5 xl:w-1/3">
               <img
                 src="https://images.unsplash.com/photo-1537996194471-e657df975ab4"
                 alt="bali"
-                className="w-[450px] mt-8 rounded-lg"
+                className="w-[700px] xl:w-[450px] mt-8 rounded-lg"
               />
             </div>
-            <div className="w-2/3 pl-8">
+            <div className="w-3/5 xl:w-2/3 pl-8">
               <FAQ />
             </div>
           </div>
