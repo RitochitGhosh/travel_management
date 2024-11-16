@@ -44,11 +44,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <ModeToggle />
           <Button variant={isAuthorized?"outline":null} size={isAuthorized?"icon":null}>
-
-            <Link href={"/auth"}> {isAuthorized?<User className="h-8 w-8" />: <div className="bg-blue-600 text-white text-md font-bold p-3 rounded-xl">SignUp</div>}</Link>
-
-            
-
+            <Link href={"/auth/sign-up"}> {isAuthorized?<User className="h-8 w-8" />: <div className="bg-blue-600 text-white text-md font-bold p-3 rounded-xl">SignUp</div>}</Link>
           </Button>
         </div>
       </div>
