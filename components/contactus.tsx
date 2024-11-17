@@ -1,8 +1,10 @@
+import { LayoutGridDemo } from "./gridLayoutdemo";
+
 export default function ContactUs() {
   return (
     <>
       <div>
-        <div className=" bg-blue-600 rounded-3xl shadow-lg p-8">
+        <div className=" bg-blue-600 rounded-3xl shadow-lg pt-8 px-8">
           <div className="flex gap-4 flex-row">
             <div className="w-1/2 p-4">
               <div className="flex flex-wrap gap-8">
@@ -84,7 +86,7 @@ export default function ContactUs() {
               </div>
             </div>
             <div className="w-1/2 rounded-md overflow-hidden">
-              <img src="" alt="" />
+              <LayoutGridDemo/>
             </div>
           </div>
         </div>

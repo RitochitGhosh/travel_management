@@ -80,6 +80,7 @@ export default function ExploreModal() {
             </Select>
             <div className="flex justify-center">
               <Button
+                id="explore"
                 className="p-4 w-1/3 text-md my-4 "
                 onClick={async () => {
                   try {

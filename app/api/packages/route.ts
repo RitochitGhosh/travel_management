@@ -6,6 +6,7 @@ export const packages = [
   {
     id: 1,
     name: "Bali Paradise Tour",
+    place: "Bali",
     type: "international",
     description:
       "8 days of tropical paradise exploration with luxury accommodations",
@@ -17,6 +18,7 @@ export const packages = [
   {
     id: 2,
     name: "Swiss Alps Adventure",
+    place: "Switzerland",
     type: "international",
     description:
       "7 days of mountain hiking and scenic train rides through Switzerland",
@@ -28,6 +30,7 @@ export const packages = [
   {
     id: 3,
     name: "Grand Canyon Explorer",
+    place: "Arizona",
     type: "domestic",
     description: "5 days experiencing the natural wonders of Arizona",
     price: 899,
@@ -38,6 +41,7 @@ export const packages = [
   {
     id: 4,
     name: "Tokyo Cultural Journey",
+    place: "Tokyo",
     type: "international",
     description: "10 days immersing in Japanese culture and modern city life",
     price: 1899,
@@ -48,6 +52,7 @@ export const packages = [
   {
     id: 5,
     name: "Hawaii Beach Retreat",
+    place: "Hawaii",
     type: "domestic",
     description: "6 days of island hopping and beach relaxation",
     price: 1599,
@@ -58,6 +63,7 @@ export const packages = [
   {
     id: 6,
     name: "Yellowstone Wildlife Tour",
+    place: "America",
     type: "domestic",
     description: "4 days exploring America's most famous national park",
     price: 699,
@@ -68,6 +74,7 @@ export const packages = [
   {
     id: 7,
     name: "Bali Tour",
+    place: "Bali",
     type: "international",
     description:
       "8 days of tropical paradise exploration",

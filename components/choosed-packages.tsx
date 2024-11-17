@@ -4,6 +4,7 @@ import { MessageCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import { AnimatedModalDemo } from "./animatedpackagesmodal";
 
 export default function ChoosedPackages({pkg}: any){
     console.log('inside function choosepackages:', pkg?.name);
@@ -29,13 +30,11 @@ export default function ChoosedPackages({pkg}: any){
               <p className="text-sm text-gray-600 mb-4">{pkg?.description}</p>
               <div className="flex justify-between items-center">
                 <span className="text-lg font-bold">${pkg?.price}</span>
-                <div className="space-x-2">
-                  <Link href={`/packages/${pkg?.id}`}>
-                    <Button variant="outline">View Details</Button>
-                  </Link>
+                <div className="space-x-2 flex ">
+                  <AnimatedModalDemo pkg = {pkg}/>
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button>
+                      <Button id="chat">
                         <MessageCircle className="mr-2 h-4 w-4" />
                         Chat
                       </Button>

@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Plane, Map, Phone, User, Divide } from "lucide-react";
 import Link from "next/link";
-import ExploreModal from "./exploremodal";
-import { divMode } from "@tsparticles/engine";
 
 
 export default function Header() {
@@ -43,8 +41,8 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <ModeToggle />
-          <Button variant={isAuthorized?"outline":null} size={isAuthorized?"icon":null}>
-            <Link href={"/auth/sign-up"}> {isAuthorized?<User className="h-8 w-8" />: <div className="bg-blue-600 text-white text-md font-bold p-3 rounded-xl">SignUp</div>}</Link>
+          <Button id = "SignUp" variant={isAuthorized?"outline":null} size={isAuthorized?"icon":null}>
+            <Link href={"/auth/sign-up"}> {isAuthorized?<User className="h-8 w-8" />: <div className="bg-blue-600 text-white text-md font-bold py-3 px-5 rounded-xl">SignUp</div>}</Link>
           </Button>
         </div>
       </div>
